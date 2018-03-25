@@ -1,0 +1,18 @@
+.emoji-container{
+	border: 2px solid black;
+	text-align: center;
+	margin: 20px 5vw;
+	padding: 10px;
+}
+
+.emoji-container:hover{
+	box-shadow: 5px 5px #888;
+	transform: scale(1.05);
+	-webkit-transition: transform .2s ease-in-out;
+	cursor: pointer;
+}
+
+.emoji-container img{
+	width: 10vw;
+	height: auto;
+}

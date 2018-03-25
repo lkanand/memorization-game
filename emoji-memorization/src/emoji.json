@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"img": "../emojis/angry.png"
+	},
+	{
+		"id": 2,
+		"img": "emojis/blow-kiss.png"
+	},
+	{
+		"id": 3,
+		"img": "emojis/confused.png"
+	},
+	{
+		"id": 4,
+		"img": "emojis/cool.png"
+	},
+	{
+		"id": 5,
+		"img": "emojis/crying.png"
+	},
+	{
+		"id": 6,
+		"img": "emojis/fearful.png"
+	},
+	{
+		"id": 7,
+		"img": "emojis/happy.png"
+	},
+	{
+		"id": 8,
+		"img": "emojis/heart-eyes.png"
+	},
+	{
+		"id": 9,
+		"img": "emojis/sleeping.png"
+	},
+	{
+		"id": 10,
+		"img": "emojis/sweat-with-smile.png"
+	},
+	{
+		"id": 11,
+		"img": "emojis/tight-eyes.png"
+	},
+	{
+		"id": 12,
+		"img": "emojis/wink.png"
+	}
+]

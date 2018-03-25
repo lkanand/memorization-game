@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'riffic-bold';
+    src: url('riffic-bold-webfont.woff2') format('woff2'),
+         url('riffic-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.wrapper {
+  padding-top: 50px;
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
+
+.game {
+}
+
+h1, h2{
+	margin: 0;
+	text-align: center;
+	font-family: 'riffic-bold';
+}
+
+h1{
+	font-size: 80px;
+	padding-top: 110px;
+	padding-bottom: 5px;
+}
+
+h2{
+	font-size: 30px;
+	padding-bottom: 0px;
+}
+
+.score-wrapper{
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  width: 100%;
+  background: lightgray;
+}
+
+p{
+  font-family: Arial;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+span{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#max-score{
+  border-left: 2px solid black;
+}
