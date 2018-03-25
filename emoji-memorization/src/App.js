@@ -4,28 +4,30 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import emojis from "./emoji.json";
 import './App.css';
 
+let emojisCopy = emojis;
+
 class App extends React.Component {
 	state = {
-		emojis,
 		selected: [],
 		score: 0,
 		maximumScore: 0
 	}
 
-	reArrange = (index) => {
-		let copyEmojisArray = this.state.emojis;
+	shuffleArray = () => {
+		for(let i = 1; i < emojisCopy.length; i++) {
+			let random = Math.floor(Math.random() * (i + 1));
+			if(random !== i) {
+				let dummy = emojisCopy[random];
+				emojisCopy[random] = emojisCopy[i];
+				emojisCopy[i] = dummy;
+			}
+		};
+	}
+
+	processClick = (index) => {
 		let copySelectedArray = this.state.selected;
 		let copyScore = this.state.score;
 		let copyMaximumScore = this.state.maximumScore;
-
-		for(let i = 1; i < copyEmojisArray.length; i++) {
-			let random = Math.floor(Math.random() * (i + 1));
-			if(random !== i) {
-				let dummy = copyEmojisArray[random];
-				copyEmojisArray[random] = copyEmojisArray[i];
-				copyEmojisArray[i] = dummy;
-			}
-		};
 
 		if(copySelectedArray.indexOf(index) === -1) {
 			copySelectedArray.push(index);
@@ -37,13 +39,14 @@ class App extends React.Component {
 			copySelectedArray = [];
 			copyScore = 0;
 		}
-		this.setState({emojis: copyEmojisArray, selected: copySelectedArray, score: copyScore, maximumScore: copyMaximumScore});
+		this.setState({selected: copySelectedArray, score: copyScore, maximumScore: copyMaximumScore});
 	}
 
 	render() {
+		this.shuffleArray();
     	return (
 	      	<Wrapper score = {this.state.score} maximum = {this.state.maximumScore}>
-	        	<EmojiCard emojis = {this.state.emojis} shuffle = {this.reArrange}/>
+	        	<EmojiCard emojis = {emojis} processClick = {this.processClick}/>
 	      	</Wrapper>
     	);
   	}
